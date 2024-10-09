@@ -14,11 +14,14 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@react-three/fiber": "^8.17.10",
+        "@types/three": "^0.169.0",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "three": "^0.169.0"
     },
     "devDependencies": {
-        "@eslint/js": "^9.11.1",
+        "@eslint/js": "^9.12.0",
         "@types/react": "^18.3.10",
         "@types/react-dom": "^18.3.0",
         "@vitejs/plugin-react-swc": "^3.5.0",
