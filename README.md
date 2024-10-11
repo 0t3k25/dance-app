@@ -50,7 +50,10 @@ export default tseslint.config({
 ```
 
 tree
+
 /root
+
+<pre>
 ├── README.md
 ├── package.json
 ├── tsconfig.json
@@ -74,3 +77,4 @@ tree
 ├── tsconfig.app.json
 ├── memo.txt
 └── node_modules/
+</pre>
