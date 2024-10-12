@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# 3D Dance app
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -25,6 +25,12 @@ export default tseslint.config({
 });
 ```
 
+## 実行
+
+```bash
+pnpm run dev
+```
+
 -   Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
 -   Optionally add `...tseslint.configs.stylisticTypeChecked`
 -   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
@@ -49,9 +55,7 @@ export default tseslint.config({
 });
 ```
 
-tree
-
-/root
+### Directory tree
 
 <pre>
 ├── README.md
