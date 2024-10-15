@@ -12,12 +12,31 @@ const MmdModle: React.FC<MmdModelUrl> = ({ url }) => {
 
     useEffect(() => {
         const loader = new MMDLoader();
-        loader.load(url, (loadedModel: Object3D) => {
-            setModel(loadedModel);
-        });
+        loader.load(
+            'hoge.pmx',
+            (loadedModel: Object3D) => {
+                console.log('Model loaded:', loadedModel); // デバッグ用ログ
+                setModel(loadedModel);
+            },
+            (xhr) => {
+                console.log((xhr.loaded / xhr.total) * 100 + '% loaded'); // ロード進捗
+            },
+            (error) => {
+                console.error('Error loading model:', error); // 基本的なエラーログ
+                console.error(
+                    'Error details:',
+                    error.message || 'No message available'
+                ); // エラーメッセージ
+                console.error(
+                    'Stack trace:',
+                    error.stack || 'No stack trace available'
+                ); // スタックトレース
+                console.error('Error object:', JSON.stringify(error, null, 2)); // エラーオブジェクトの全体を表示
+            }
+        );
     }, [url]);
 
     return model ? <primitive object={model} dispose={null} /> : null;
 };
 
-export default MmmdModel;
+export default MmdModle;
