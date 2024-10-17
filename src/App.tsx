@@ -1,14 +1,19 @@
-import React from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import MmdModel from './components/MmdModel';
+import { Canvas } from '@react-three/fiber'; // react-three-fiberのCanvas
+import { OrbitControls } from '@react-three/drei'; // カメラの操作を簡単にするためのOrbitControls
+import MMDModel from './components/MmdModel';
 
-const App: React.FC = () => {
+const App = () => {
     return (
-        <Canvas>
-            <ambientLight intensity={100} />
+        <Canvas camera={{ position: [0, 10, 30], fov: 50 }}>
+            {/* 照明 */}
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 10]} intensity={1} />
+
+            {/* カメラ操作 */}
             <OrbitControls />
-            <MmdModel url="./assets/models/hoge.pmx" />
+
+            {/* MMDモデルを表示 */}
+            <MMDModel modelPath="../public/models/hoge.pmx" />
         </Canvas>
     );
 };
