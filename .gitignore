@@ -26,3 +26,8 @@ dist-ssr
 # misc
 .env
 private_notes.md
+*.png
+*.pmx
+
+# model_data texture and so on
+/publc/*
