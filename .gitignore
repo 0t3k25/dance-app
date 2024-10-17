@@ -30,4 +30,4 @@ private_notes.md
 *.pmx
 
 # model_data texture and so on
-/publc/*
+/public/*
