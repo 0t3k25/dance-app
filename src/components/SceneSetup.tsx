@@ -12,7 +12,7 @@ const SceneSetup = ({ children }: SceneSetupProps) => {
     return (
         <Canvas
             style={{ background: 'skyblue', width: '100vw', height: '100vh' }} // ビューポート全体に広げる
-            camera={{ position: [0, 10, 30], fov: 50 }}
+            camera={{ position: [0, 10, 30] }}
         >
             <ambientLight intensity={1.5} />
             <directionalLight intensity={2.5} position={[10, 10, 10]} />
